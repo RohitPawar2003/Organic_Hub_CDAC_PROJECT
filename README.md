@@ -1,77 +1,94 @@
-🌱 Organic Hub – Farmer-to-Customer E-Commerce Platform
-Organic Hub is a full-stack e-commerce web application designed to connect Farmers, Shopkeepers, and Customers on a single digital marketplace.
-The platform enables the sale of organic products directly from producers to consumers, reducing middlemen and ensuring fair pricing, transparency, and better income for farmers.
+# 🌱 Organic Hub – Farmer-to-Customer E-Commerce Platform
 
-🎯 Project Purpose
-The goal of Organic Hub is to digitize the organic product supply chain by enabling direct farmer-to-customer transactions.
-It reduces dependency on intermediaries, improves farmers’ profit margins, and provides customers with fresh and trusted organic products using a secure, scalable, and role-based system.
+**Organic Hub** is a full-stack e-commerce web application designed to connect Farmers, Shopkeepers, and Customers on a single digital marketplace. It streamlines the organic product supply chain, ensuring fair pricing and transparency.
 
-🏗️ Project Architecture
-The application follows a decoupled and layered architecture for scalability, security, and maintainability.
+---
 
-Frontend: React.js (Vite)
-Backend: Spring Boot REST APIs
-(Controller → Service → Repository)
-Database: MySQL (Relational Database)
+## 🎯 Project Purpose
+* **Direct Trade:** Eliminates middlemen to increase farmer profit margins.
+* **Freshness:** Provides customers with direct access to fresh organic produce.
+* **Transparency:** Secure, role-based system for tracking orders and payments.
 
-🛠️ Tech Stack
-Frontend
-Framework: React.js (Vite)
-HTTP Client: Axios
-Routing: React Router DOM
-Styling: Bootstrap
+---
 
-Backend
-Framework: Spring Boot 3.x
-ORM: Spring Data JPA (Hibernate)
-Database: MySQL
-Security: Spring Security with JWT
-Documentation: Swagger / OpenAPI
-Object Mapping: ModelMapper
+## 🏗️ Project Architecture
+The application follows a decoupled and layered architecture:
+* **Frontend:** React.js (Vite)
+* **Backend:** Spring Boot REST APIs (Controller → Service → Repository)
+* **Database:** MySQL (Relational Database)
 
-👥 User Roles & Features
-👨‍🌾 Farmer
-Secure registration and role-based login
-Add, update, and delete organic products
-Manage product stock and pricing
-View listed products
+---
 
-🏪 Shopkeeper
-Manage shop inventory
-Add and update products
-Handle product availability
+## 🛠️ Tech Stack
 
-🛒 Customer
-Browse and search organic products
-Place orders and make payments
-Track order and payment status
+### **Frontend**
+- **Framework:** React.js (Vite)
+- **HTTP Client:** Axios
+- **Routing:** React Router DOM
+- **Styling:** Bootstrap 5
 
-👨‍💼 Admin
-Activate or deactivate user accounts
-Manage product categories
-Monitor all orders and payments
+### **Backend**
+- **Framework:** Spring Boot 3.x
+- **ORM:** Spring Data JPA (Hibernate)
+- **Security:** Spring Security with JWT (JSON Web Tokens)
+- **Documentation:** Swagger / OpenAPI
+- **Object Mapping:** ModelMapper
 
-Oversee overall system activity
-🚀 Installation & Setup
-1. Backend (Spring Boot)
-Clone the repository:
+---
 
-Update MySQL credentials in
-src/main/resources/application.properties:
+## 👥 User Roles & Features
 
-spring.datasource.url=jdbc:mysql://localhost:3306/organichub
+### 👨‍🌾 Farmer
+- Role-based registration and secure login.
+- **Product Management:** Add, update, and delete organic products.
+- **Inventory:** Real-time stock and pricing management.
+
+### 🏪 Shopkeeper
+- Manage shop inventory.
+- Update product availability and shop details.
+
+### 🛒 Customer
+- Browse/Search organic products.
+- Place orders and process secure payments.
+- Track order history and payment status.
+
+### 👨‍💼 Admin
+- **User Control:** Activate/Deactivate user accounts.
+- **Category Management:** Create and manage product categories.
+- **Monitoring:** Oversee all transactions and system activities.
+
+---
+
+## 📂 Database Schema (Key Entities)
+- **User:** Stores credentials and roles (Farmer, Customer, Admin).
+- **Product:** Details about organic items, price, and stock.
+- **Category:** Classification of products (e.g., Vegetables, Fruits, Grains).
+- **Order:** Records customer purchases and delivery status.
+- **Payment:** Tracks transaction success/failure.
+
+---
+
+
+## 🚀 Installation & Setup
+
+### **1. Backend (Spring Boot)**
+1. **Clone the repository:**
+2. Configure MySQL: Update src/main/resources/application.properties:
+   spring.datasource.url=jdbc:mysql://localhost:3306/organichub
 spring.datasource.username=your_db_username
 spring.datasource.password=your_db_password
+spring.jpa.hibernate.ddl-auto=update
 
-Run the application:
-mvn spring-boot:run
+3.  *Run the application:*
+    bash
+    mvn spring-boot:run
+    
 
-2. Frontend (React + Vite)
-Navigate to frontend folder:
-cd frontend
-Install dependencies and run:
-npm install
-npm run dev
-
-Access the application:
-Open http://localhost:5173 in your browser.
+### *2. Frontend (React + Vite)*
+1.  *Navigate to frontend folder:*
+    bash
+    cd frontend
+    npm install
+    npm run dev
+    
+2.  *Access the app:* Open http://localhost:5173 in your browser.
